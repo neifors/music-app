@@ -1,6 +1,10 @@
 // App.js
 import React from 'react'
-import { Biography } from './pages';
+import { Biography, Albums } from './pages';
+import {Routes, Route} from 'react-router-dom'
+import { Layout } from './layout';
+import './App.css';
+
 
 // import './App.css';
 
@@ -8,9 +12,14 @@ import { Biography } from './pages';
 const App = () => {
    return (
      <>
-     <Biography />
+     <Routes>
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<Biography/>}/>
+        <Route path="albums" element={<Albums/>}/>
+      </Route>
+     </Routes>
      </>
    )
  };
 
-export default App
+export default App;

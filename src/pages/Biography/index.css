@@ -4,12 +4,8 @@ div#biography {
    align-items: center;
 
 }
-
 div#biography h1#michael-jackson-title {
    font-size: 50px;
    font-family: 'Rubik Wet Paint', cursive;
 }
 
-div#biography p#short-biography {
-   padding: 10px 50px;
-}
