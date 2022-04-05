@@ -2,6 +2,9 @@
 import React from 'react'
 import { Biography } from './pages';
 
+// import './App.css';
+
+
 const App = () => {
    return (
      <>

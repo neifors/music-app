@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import './styles.css';
 
-export default function Slideshow({images=[], interval=3000}){
+export function Slideshow({images=[], interval=3000}){
    const [thumbnails, setThumnails] = useState([]);
    const [previousSlideStyle, setPreviousSlideStyle] = useState({});
    const [currentSlide, setCurrentSlide] = useState(0);
