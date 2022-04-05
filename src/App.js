@@ -1,6 +1,13 @@
 // App.js
 import React from 'react'
+import { Biography } from './pages';
 
-const App = () => <h1>Hello World!</h1>
+const App = () => {
+   return (
+     <>
+     <Biography />
+     </>
+   )
+ };
 
 export default App
