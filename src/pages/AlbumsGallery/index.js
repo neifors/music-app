@@ -4,7 +4,7 @@ import {DisplayGallery} from '../../components';
 import './index.css';
 
 
-export function Albums() {
+export function AlbumsGallery() {
 
    return(
       <div id="albums-wrapper">

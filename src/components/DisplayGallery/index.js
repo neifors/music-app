@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./index.css";
 
 
 export const DisplayGallery = ( ) => {
+
+   const goTo = useNavigate()
+
    const [ albums, setAlbums ] = useState([
       { id: 1, img: "https://th.bing.com/th/id/OIP.wNqzAst6QqTy-akb7_9cPgHaG-?pid=ImgDet&rs=1", title: 'Got to Be There', year: '1972'},
       { id: 2, img: "https://4.bp.blogspot.com/-lvvln77gmqI/UKS_3rOG9xI/AAAAAAAACyM/aUmyqJWVNpk/s1600/Michael_Jackson-Ben-Frontal.jpg", title: 'Ben', year: '1972'},
@@ -15,7 +19,8 @@ export const DisplayGallery = ( ) => {
       { id: 9, img: "https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/6c/02/71/6c0271f7-5e45-37ea-1de2-2068050f4cf8/884977149166.jpg/1200x630bb.jpg", title: 'HIStory: Past, Present and Future, Book I', year: '1995'},
       { id: 10, img: "https://www.theedgesusu.co.uk/wp-content/uploads/2016/10/00.-Michael-Jackson-Invincible-Front.jpg", title: 'Invincible', year: '2001'}
    ])
-   const renderAlbums = () => albums.map(alb => <div className="album-card" key={alb.id}><img className="album-img" src={alb.img}/><h3>{alb.title}</h3><p>{alb.year}</p></div>)
+
+   const renderAlbums = () => albums.map(alb => <div className="album-card" key={alb.id} onClick={() => goTo(alb.id.toString())}><img className="album-img" src={alb.img}/><h3>{alb.title}</h3><p>{alb.year}</p></div>)
    
    
    return (
@@ -24,36 +29,3 @@ export const DisplayGallery = ( ) => {
       </>
    )
 }
-
-// import React from 'react';
-// import Gallery from 'react-grid-gallery';
-
-// export const DisplayGallery = () => {
-//    const images =
-//    [{
-//          src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-//          thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-//          thumbnailWidth: 320,
-//          thumbnailHeight: 174,
-//          isSelected: true,
-//          caption: "After Rain (Jeshu John - designerspics.com)"
-//    },
-//    {
-//          src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-//          thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-//          thumbnailWidth: 320,
-//          thumbnailHeight: 212,
-//          tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-//          caption: "Boats (Jeshu John - designerspics.com)"
-//    },
-//    {
-//          src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-//          thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-//          thumbnailWidth: 320,
-//          thumbnailHeight: 212
-//    }]
-
-//    return(
-//          <Gallery images={images}/>
-//    )
-// }

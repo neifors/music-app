@@ -1,2 +1,4 @@
 export {Biography} from './Biography';
-export {Albums} from './Albums';
+export {AlbumsGallery} from './AlbumsGallery';
+export {Album} from './Album'
+
