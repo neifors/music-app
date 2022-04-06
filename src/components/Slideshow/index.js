@@ -42,6 +42,7 @@ export function Slideshow({images=[], interval=3000}){
                setCurrentSlide(currentSlide+1);
            }
        }, interval);
+       /* Next line stops interval when leaving */
        return () => clearInterval(loop); 
    }, [images, currentSlide, interval]);
 

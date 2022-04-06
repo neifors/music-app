@@ -3,8 +3,8 @@ div#albums-wrapper div#albums-title-wrapper {
 }
 
 div#albums-wrapper div#albums-title-wrapper h1#albums-title {
-   font-size: 60px;
-   font-family: 'Rubik Wet Paint', cursive;
+   font-size: 80px;
+   font-family: 'Bebas Neue', cursive;
    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
