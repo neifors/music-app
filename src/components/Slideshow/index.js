@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-import './styles.css';
+import './index.css';
 
 export function Slideshow({images=[], interval=3000}){
    const [thumbnails, setThumnails] = useState([]);
@@ -76,8 +76,8 @@ export function Slideshow({images=[], interval=3000}){
            </div>
 
            <div className="slideshow-controller">
-               <span onClick={previous}>Previous</span>
-               <span onClick={next}>Next</span>
+               <span id="previous-controller" onClick={previous}>Previous</span>
+               <span id="next-controller" onClick={next}>Next</span>
            </div>
        </section>
    )
