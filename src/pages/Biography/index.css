@@ -5,7 +5,7 @@ div#biography {
 
 }
 div#biography h1#michael-jackson-title {
-   font-size: 50px;
+   font-size: 60px;
    font-family: 'Rubik Wet Paint', cursive;
    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
    -webkit-background-clip: text;

@@ -1,0 +1,11 @@
+div#albums-wrapper div#albums-title-wrapper {
+   text-align: center;
+}
+
+div#albums-wrapper div#albums-title-wrapper h1#albums-title {
+   font-size: 60px;
+   font-family: 'Rubik Wet Paint', cursive;
+   background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}

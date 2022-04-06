@@ -7,8 +7,10 @@ import './index.css';
 export function Albums() {
 
    return(
-      <div id="albums">
-         <h1 id="albums">ALBUMS!</h1>
+      <div id="albums-wrapper">
+         <div id="albums-title-wrapper">
+            <h1 id="albums-title">ALBUMS DISCOGRAPHY</h1>
+         </div>
          <DisplayGallery />
       </div>
    )
