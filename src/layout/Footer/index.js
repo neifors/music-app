@@ -1,7 +1,11 @@
 import React from 'react';
+import './index.css';
+
 
 export const Footer = () => {
    return(
-      <p>By Isabel Repetto</p>
+      <div className='footer'>
+         <p>By Isabel Repetto</p>
+      </div>
    )
 }

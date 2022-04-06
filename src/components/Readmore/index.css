@@ -1,9 +1,15 @@
 p.biography {
-  padding: 10px 50px;
-  font-family: 'Freehand', cursive;
+  padding: 0 50px;
+  /* font-family: 'Freehand', cursive; */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-span.read-or-hide{
+p.biography span.read-or-hide{
   color: rgb(192,192,192);
   cursor: pointer;
+  font-size: 30px;
 } 
