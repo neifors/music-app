@@ -15,13 +15,12 @@ export const DisplayGallery = ( ) => {
       { id: 9, img: "https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/6c/02/71/6c0271f7-5e45-37ea-1de2-2068050f4cf8/884977149166.jpg/1200x630bb.jpg", title: 'HIStory: Past, Present and Future, Book I', year: '1995'},
       { id: 10, img: "https://www.theedgesusu.co.uk/wp-content/uploads/2016/10/00.-Michael-Jackson-Invincible-Front.jpg", title: 'Invincible', year: '2001'}
    ])
-   const renderAlbums = () => albums.map(alb => <div class="album-card" key={alb.id}><img class="album-img" src={alb.img}/><h3>{alb.title}</h3><p>{alb.year}</p></div>)
+   const renderAlbums = () => albums.map(alb => <div className="album-card" key={alb.id}><img className="album-img" src={alb.img}/><h3>{alb.title}</h3><p>{alb.year}</p></div>)
    
    
    return (
       <>
-         <h1>Gallery component</h1>
-         <ul>{renderAlbums()}</ul>
+         {albums && <div id="albums-wrapper">{renderAlbums()}</div>}
       </>
    )
 }

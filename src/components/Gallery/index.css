@@ -1,3 +1,31 @@
-div.album-card img.album-img {
+div#albums-wrapper {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+}
+
+div#albums-wrapper div.album-card{
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   margin: 40px 70px;
+   border: 1px solid black;
+   text-align: center;
+   border: 1px solid;
+   box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+}
+
+div#albums-wrapper div.album-card img.album-img {
    width: 200px;
+}
+
+div#albums-wrapper div.album-card h3{
+   max-width: 200px;
+   margin-bottom: 0;
+   margin-top: 5px;
+}
+
+div#albums-wrapper div.album-card p{
+   margin-top: 0;
 }
