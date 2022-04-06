@@ -9,7 +9,7 @@ const ReadMore = ({ children }) => {
   };
   return (
     <p className="biography">
-      {isReadMore ? text.slice(0, 150) : text}
+      {isReadMore ? text.slice(0, 180) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
         {isReadMore ? "...Read more" : " Show less"}
       </span>

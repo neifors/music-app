@@ -1,0 +1,12 @@
+nav#nav-bar{
+   display: flex;
+   margin: 12px;
+}
+
+nav#nav-bar div.nav-bar-link a{
+   margin:10px;
+   text-decoration: none;
+   color: black;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   padding: 10px 0;
+}
