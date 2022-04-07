@@ -26,7 +26,7 @@ export const FeaturedAlbum = props => {
       goTo(-1);
    };
 
-   const renderSongs = (album) => album['songs'].map( song => <li>{song}</li>)
+   // const renderSongs = (album) => album['songs'].map( song => <li>{song}</li>)
    
 
    useEffect( () => {
@@ -45,9 +45,9 @@ export const FeaturedAlbum = props => {
          <div className="box">
             <span className="close-icon" onClick={close}>x</span>
             <h1>{`${selectedAlbum['title']}`}</h1>
-            <ul>
+            {/* <ul>
                {renderSongs(selectedAlbum)}
-            </ul>
+            </ul> */}
          </div>
       </div>
    );
