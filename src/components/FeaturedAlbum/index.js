@@ -18,7 +18,7 @@ export const FeaturedAlbum = props => {
    ];
 
    const goTo = useNavigate();
-   const [ selectedAlbum, setSelectedAlbum ] = useState();
+   const [ selectedAlbum, setSelectedAlbum ] = useState([]);
    const { albumId } = useParams();
 
    const close = () => {
@@ -26,24 +26,23 @@ export const FeaturedAlbum = props => {
       goTo(-1);
    };
 
-   // if(albumId > albums.length){ throw new Error("No album with that id")};
+   useEffect( () => {
+      try {
+         if(albumId > albums.length){ throw new Error("No album with that id")};
 
-   useEffect(() => {
-      const result = albums.find( alb => alb['id'] == albumId);
-      console.log(result);
-      /* This is printing undefined as 'album' has no value yet */
-      console.log(selectedAlbum);
-      /* I try to set a number to check if it is working but is not */
-      setSelectedAlbum(result);
-      /* This is still printing undefined */
-      console.log(selectedAlbum);  
+         const result = albums.find( alb => alb['id'] == albumId);
+         setSelectedAlbum(result);
+      }catch(e){
+         console.warm(`Oooops! ${e.message}`)
+      }
+
    },[albumId])
 
    return (
       <div className="popup-box">
          <div className="box">
          <span className="close-icon" onClick={close}>x</span>
-         {albumId}
+         <h1>{`${selectedAlbum['title']}`}</h1>
          </div>
       </div>
    );
