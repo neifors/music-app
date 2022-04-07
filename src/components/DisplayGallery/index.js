@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { FeaturedAlbum } from "..";
 import "./index.css";
 
 
@@ -19,13 +20,42 @@ export const DisplayGallery = ( ) => {
       { id: 9, img: "https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/6c/02/71/6c0271f7-5e45-37ea-1de2-2068050f4cf8/884977149166.jpg/1200x630bb.jpg", title: 'HIStory: Past, Present and Future, Book I', year: '1995'},
       { id: 10, img: "https://www.theedgesusu.co.uk/wp-content/uploads/2016/10/00.-Michael-Jackson-Invincible-Front.jpg", title: 'Invincible', year: '2001'}
    ])
+         
+   
+   const [isOpen, setIsOpen] = useState(false);
+ 
+   const togglePopup = () => {
+      setIsOpen(!isOpen);
+   }
 
-   const renderAlbums = () => albums.map(alb => <div className="album-card" key={alb.id} onClick={() => goTo(alb.id.toString())}><img className="album-img" src={alb.img}/><h3>{alb.title}</h3><p>{alb.year}</p></div>)
+   const renderAlbums = () => albums.map(alb => 
+      <div 
+         className="album-card" 
+         key={alb.id} 
+         onClick={() => {
+            goTo(alb.id.toString());
+            togglePopup();
+         }
+      }>
+         <img 
+            className="album-img" 
+            src={alb.img}/>
+         <h3>{alb.title}</h3>
+         <p>{alb.year}</p>
+      </div>)
    
-   
+
    return (
       <>
          {albums && <div id="albums-wrapper">{renderAlbums()}</div>}
+         {isOpen && <FeaturedAlbum
+                     content={<>
+                     <b>Design your Popup</b>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <button>Test button</button>
+                     </>}
+                     handleClose={togglePopup}
+         />}
       </>
    )
 }
