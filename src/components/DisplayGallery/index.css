@@ -15,6 +15,7 @@ div#albums-wrapper div.album-card{
    text-align: center;
    border: 1px solid;
    box-shadow: 5px 5px 8px rgb(29, 29, 31), 10px 10px 8px rgb(184, 21, 21), 15px 15px 8px rgb(11, 62, 11);
+   cursor: pointer;
 }
 
 div#albums-wrapper div.album-card img.album-img {
