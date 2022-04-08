@@ -42,7 +42,9 @@ export const FeaturedAlbum = props => {
       <div className="popup-box">
          <div className="box">
             <span className="close-icon" onClick={close}>x</span>
-            <h1>{`${selectedAlbum['title']}`}</h1>
+            <div className="popup-header">
+               <h1>{`${selectedAlbum['title']}`}</h1>
+            </div>
             <div className="songs-and-img-wrapper">
                <img  className="album-img" src={selectedAlbum['img']}  />
                <ol>
