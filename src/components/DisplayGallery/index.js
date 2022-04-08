@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { FeaturedAlbum } from "..";
-import albums from "../../data/data"
+import {albums} from "../../data/data"
 import "./index.css";
 
 

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import albums from "../../data/data"
+import {albums} from "../../data/data"
 import './index.css';
  
 export const FeaturedAlbum = props => {
