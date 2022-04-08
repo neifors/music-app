@@ -5,7 +5,7 @@ import './index.css';
 export const FeaturedAlbum = props => {
 
    const albums = [
-      { id: 1, img: "https://th.bing.com/th/id/OIP.wNqzAst6QqTy-akb7_9cPgHaG-?pid=ImgDet&rs=1", title: 'Got to Be There', year: '1972', songs: [ "1. Ain’t No Sunshine", "2. I Wanna Be Where You Are", "3. Girl Don’t Take Your Love from Me", "4. In Our Small Way", "5. Got to Be There", "6. Rockin’ Robin", "7. Wings of My Love", "8. Maria (You Were the Only One)", "9. Love Is Here and Now You’re Gone", "10. You’ve Got a Friend"]},
+      { id: 1, img: "https://th.bing.com/th/id/OIP.wNqzAst6QqTy-akb7_9cPgHaG-?pid=ImgDet&rs=1", title: 'Got to Be There', year: '1972', songs: [ "Ain’t No Sunshine", "I Wanna Be Where You Are", "Girl Don’t Take Your Love from Me", "In Our Small Way", "Got to Be There", "Rockin’ Robin", "Wings of My Love", "Maria (You Were the Only One)", "Love Is Here and Now You’re Gone", "You’ve Got a Friend"]},
       { id: 2, img: "https://4.bp.blogspot.com/-lvvln77gmqI/UKS_3rOG9xI/AAAAAAAACyM/aUmyqJWVNpk/s1600/Michael_Jackson-Ben-Frontal.jpg", title: 'Ben', year: '1972', songs: []},
       { id: 3, img: "https://i.ebayimg.com/images/g/IPgAAOSwQcBg-gR1/s-l300.jpg", title: 'Music & Me', year: '1973', songs: []},
       { id: 4, img: "https://3.bp.blogspot.com/-95do5JfeMeU/T6bKAmmv63I/AAAAAAAAHlY/u9T6JXQDofA/s1600/michael-jackson-forever-michael.jpg", title: 'Forever, Michael', year: '1975', songs: []},
@@ -26,7 +26,17 @@ export const FeaturedAlbum = props => {
       goTo(-1);
    };
 
-   // const renderSongs = (album) => album['songs'].map( song => <li>{song}</li>)
+   const renderSongs = (album) => {
+      try{
+         let count = 0
+         return album['songs'].map( (song) => {
+                                       count++;
+                                       return <li key={count}>{song}</li>;
+                                  })
+      }catch(e){
+         console.warn(e.message)
+      }
+   }
    
 
    useEffect( () => {
@@ -45,9 +55,12 @@ export const FeaturedAlbum = props => {
          <div className="box">
             <span className="close-icon" onClick={close}>x</span>
             <h1>{`${selectedAlbum['title']}`}</h1>
-            {/* <ul>
-               {renderSongs(selectedAlbum)}
-            </ul> */}
+            <div className="songs-and-img-wrapper">
+               <img  className="album-img" src={selectedAlbum['img']}  />
+               <ol>
+                  {renderSongs(selectedAlbum)}
+               </ol>
+            </div>
          </div>
       </div>
    );

@@ -6,9 +6,9 @@
    height: 100vh;
    top: 0;
    left: 0;
- }
-  
- .box {
+}
+
+.box {
    position: relative;
    width: 70%;
    margin: 0 auto;
@@ -20,9 +20,9 @@
    padding: 20px;
    border: 1px solid #999;
    overflow: auto;
- }
-  
- .close-icon {
+}
+
+.close-icon {
    content: 'x';
    cursor: pointer;
    position: fixed;
@@ -36,4 +36,14 @@
    text-align: center;
    border: 1px solid #999;
    font-size: 20px;
- }
+}
+
+div.popup-box div.box div.songs-and-img-wrapper {
+   display:flex;
+
+}
+
+div.popup-box div.box div.songs-and-img-wrapper img.album-img{
+   width: 150px;
+   height: 150px;
+}
