@@ -13,12 +13,16 @@ div#biography h1#michael-jackson-title {
    margin-top: 0;
 }
 
-div#biography h1#michael-jackson-title img.title-imgs {
+div#biography div#biography-title-wrapper {
+   display: flex;
+}
+
+div#biography div#biography-title-wrapper img.title-imgs {
    height: 80px;
    padding: 0 30px;
 }
 
-div#biography h2#biography-title {
+div#biography div#biography-title-wrapper h2#biography-title {
    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;

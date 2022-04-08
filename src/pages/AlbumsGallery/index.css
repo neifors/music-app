@@ -1,4 +1,5 @@
 div#albums-wrapper div#albums-title-wrapper {
+   display: flex;
    text-align: center;
 }
 
@@ -12,7 +13,7 @@ div#albums-wrapper div#albums-title-wrapper h1#albums-title {
 
 }
 
-div#albums-wrapper div#albums-title-wrapper h1#albums-title img.title-imgs {
+div#albums-wrapper div#albums-title-wrapper img.title-imgs {
    height: 80px;
    padding: 0 30px;
 }
