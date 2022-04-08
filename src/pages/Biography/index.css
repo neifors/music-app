@@ -22,7 +22,7 @@ div#biography div#biography-title-wrapper img.title-imgs {
    padding: 0 30px;
 }
 
-div#biography div#biography-title-wrapper h2#biography-title {
+div#biography h2#biography-title {
    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
