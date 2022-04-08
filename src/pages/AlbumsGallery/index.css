@@ -8,4 +8,11 @@ div#albums-wrapper div#albums-title-wrapper h1#albums-title {
    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+   margin-top: 0;
+
+}
+
+div#albums-wrapper div#albums-title-wrapper h1#albums-title img.title-imgs {
+   height: 80px;
+   padding: 0 30px;
 }

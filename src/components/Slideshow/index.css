@@ -8,14 +8,14 @@ section.slideshow div.slide-holder{
    flex-direction: row;
 }
 section.slideshow section.current-slide{
-   width: 300px;
-   height: 200px;
+   width: 400px;
+   height: 300px;
    margin: auto 10px;
 }
 section.slideshow section.previous-slide,
 section.slideshow section.next-slide{
-   width: 150px;
-   height: 100px;
+   width: 200px;
+   height: 150px;
 }
 section.slideshow section.slide div.slide-thumbnail{
    width: 100%;
