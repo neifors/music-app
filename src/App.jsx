@@ -20,6 +20,7 @@ const App = () => {
           <Route index element={<DisplayGallery />} />
           <Route path=":albumId" element={<FeaturedAlbum />} />
 		    </Route>
+        <Route path='timeline' element={<Pages.Timelinepage />} />
       </Route>
      </Routes>
      </>
