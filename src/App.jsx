@@ -15,12 +15,12 @@ const App = () => {
      <>
      <Routes>
       <Route path="/" element={<Layout/>}>
-        <Route index element={<Pages.Biography/>}/>
+        <Route index element={<Pages.Homepage/>}/>
         <Route path="albums" element={<Pages.AlbumsGallery/>}>
           <Route index element={<DisplayGallery />} />
           <Route path=":albumId" element={<FeaturedAlbum />} />
 		    </Route>
-        <Route path='timeline' element={<Pages.Timelinepage />} />
+        <Route path='biography' element={<Pages.Biography />} />
       </Route>
      </Routes>
      </>
