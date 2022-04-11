@@ -1,29 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { FeaturedAlbum } from "..";
-import {albums} from "../../data/data"
+import axios from 'axios'
 import "./index.css";
 
 
 export const DisplayGallery = ( ) => {
 
    const goTo = useNavigate()
-
    const [isOpen, setIsOpen] = useState(false);
- 
-   const togglePopup = () => {
-      setIsOpen(!isOpen);
+   const [albums, setAlbums] = useState([])
+   const togglePopup = () => setIsOpen(!isOpen);
+
+   const fetchAlbums = async () => {
+      try{
+         let {data,error} = await axios.get('https://michael-jackson-api.herokuapp.com/albums');
+         console.log(data)
+         setAlbums(data)
+      }catch(e){
+         console.warn(`Oooops! ${e.message}`)
+      }
    }
 
+   useEffect(() => {
+      fetchAlbums()
+   },[])
+
    const renderAlbums = () => albums.map(alb => 
-      <div 
-         className="album-card" 
-         key={alb.id} 
-         onClick={() => {
-            goTo(alb.id.toString());
-            togglePopup();
-         }
-      }>
+      <div className="album-card" key={alb.id} onClick={() => {
+                                                         goTo(alb.id.toString());
+                                                         togglePopup();
+                                                      }}>
          <img 
             className="album-img" 
             src={alb.img}/>

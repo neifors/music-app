@@ -66,19 +66,19 @@ export function Slideshow({images=[], interval=3000}){
        <section className="slideshow">
            <div className="slide-holder">
                <section className="slide previous-slide">
-                   <div style={previousSlideStyle} className="slide-thumbnail"></div>
+                   <div role="previous-slide" style={previousSlideStyle} className="slide-thumbnail"></div>
                </section>
                <section className="slide current-slide">
-                   <div style={currentSlideStyle} className="slide-thumbnail"></div>
+                   <div role="current-slide" style={currentSlideStyle} className="slide-thumbnail"></div>
                </section>
                <section className="slide next-slide">
-                   <div style={nextSlideStyle} className="slide-thumbnail"></div>
+                   <div role="next-slide" style={nextSlideStyle} className="slide-thumbnail"></div>
                </section>
            </div>
 
            <div className="slideshow-controller">
-               <span id="previous-controller" onClick={previous}>Previous</span>
-               <span id="next-controller" onClick={next}>Next</span>
+               <span role="previous-button" id="previous-controller" onClick={previous}>Previous</span>
+               <span role="next-button" id="next-controller" onClick={next}>Next</span>
            </div>
        </section>
    )
