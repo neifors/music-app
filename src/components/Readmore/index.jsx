@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { biography1, biography2 } from "../../data/data";
+// import { biography1, biography2 } from "../../data/data";
 import "./index.css";
   
-const ReadMore = ({ children }) => {
+export const ReadMore = ({ children }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
   const toggleReadMore = () => {
@@ -18,14 +18,4 @@ const ReadMore = ({ children }) => {
   );
 };
   
-export const Content = () => {
-  return (
-    <div className="container">
-      <ReadMore>
-        {biography1+biography2}
-        
-      </ReadMore>
-    </div>
-  );
-};
-  
+

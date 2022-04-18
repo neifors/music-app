@@ -21,6 +21,7 @@ const App = () => {
           <Route path=":albumId" element={<FeaturedAlbum />} />
 		    </Route>
         <Route path='biography' element={<Pages.Biography />} />
+        <Route path='quizzlybears' element={<Pages.QuizzlyBears />} />
       </Route>
      </Routes>
      </>
